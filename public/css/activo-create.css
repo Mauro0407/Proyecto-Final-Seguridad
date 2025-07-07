@@ -1,0 +1,198 @@
+/* ==== Contenedor y layout ==== */
+.border-start {
+    border-left: 2px solid rgba(13, 110, 253, 0.2) !important;
+    transition: border-color 0.3s ease;
+}
+
+.border-start:hover {
+    border-left-color: #0d6efd !important;
+}
+
+.ps-4 {
+    padding-left: 1.5rem !important;
+}
+
+/* ==== Card styling ==== */
+.card {
+    border: none;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.75rem !important;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    border-radius: 0.75rem 0.75rem 0 0 !important;
+    background: linear-gradient(135deg, #212529 0%, #343a40 100%);
+}
+
+/* ==== Títulos ==== */
+h5.text-primary {
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    font-size: 1.3rem;
+    border-bottom: 2px solid rgba(13, 110, 253, 0.2);
+    padding-bottom: 0.25rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+h5.text-primary:hover {
+    border-bottom-color: #0d6efd;
+}
+
+/* ==== Inputs ==== */
+.form-control {
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    border-color: #86b7fe;
+}
+
+/* ==== Inputs readonly ==== */
+input[readonly], textarea[readonly] {
+    background-color: #f8f9fa !important;
+    cursor: not-allowed;
+    border-radius: 0.5rem;
+    color: #495057;
+    font-weight: 600;
+    border: 1px solid #dee2e6;
+}
+
+/* ==== Calculated values ==== */
+.calculated-value {
+    font-weight: 700;
+    color: #0d6efd;
+    background-color: #f8f9fa !important;
+}
+
+/* ==== Botones ==== */
+#submitBtn {
+    min-width: 160px;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #198754 0%, #157347 100%);
+    border: none;
+}
+
+#submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 0.75rem rgba(25, 135, 84, 0.3);
+}
+
+.btn-success {
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(25, 135, 84, 0.2);
+}
+
+/* ==== Spinner ==== */
+#loadingSpinner {
+    margin-left: 0.5rem;
+}
+
+/* ==== Alertas ==== */
+.alert strong {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.alert ul {
+    margin-bottom: 0;
+}
+
+/* ==== Labels ==== */
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+/* ==== Risk level indicators ==== */
+.risk-indicator {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.risk-indicator::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #6c757d;
+}
+
+.risk-low::before {
+    background-color: #198754;
+}
+
+.risk-medium::before {
+    background-color: #ffc107;
+}
+
+.risk-high::before {
+    background-color: #fd7e14;
+}
+
+.risk-critical::before {
+    background-color: #dc3545;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: translateY(-50%) scale(1); }
+    50% { transform: translateY(-50%) scale(1.1); }
+    100% { transform: translateY(-50%) scale(1); }
+}
+
+/* ==== Animation ==== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 767.98px) {
+    .border-start {
+        border-left: none !important;
+        border-top: 2px solid rgba(13, 110, 253, 0.2) !important;
+        padding-left: 0 !important;
+        padding-top: 1.5rem !important;
+        margin-top: 1.5rem;
+    }
+
+    .ps-4 {
+        padding-left: 0 !important;
+    }
+
+    .card-header h4 {
+        font-size: 1.25rem;
+    }
+    
+    #submitBtn {
+        width: 100%;
+    }
+}
