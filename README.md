@@ -1,4 +1,5 @@
 🛡️ Descargo de Responsabilidad
+
 Este repositorio contiene una propuesta académica de metodología para la evaluación del riesgo cibernético, elaborada como parte de un proyecto final para la asignatura Seguridad Informática (ITIZ-3301) en la Facultad de Ingeniería y Ciencias Aplicadas.
 
 Autores: Isaac Trujillo, Enzo Cortez, Mauricio Mora
